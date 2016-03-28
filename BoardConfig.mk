@@ -21,6 +21,10 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/kenzo
 
+TARGET_SPECIFIC_HEADER_PATH := device/xiaomi/kenzo/include
+
+TARGET_OTA_ASSERT_DEVICE := kenzo
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
