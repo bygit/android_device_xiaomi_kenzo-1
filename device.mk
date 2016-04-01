@@ -93,6 +93,13 @@ PRODUCT_PACKAGES += \
     memtrack.msm8952 \
     liboverlay
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    qcom.fmradio \
+    FM2 \
+    libqcomfm_jni
+
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
