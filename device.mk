@@ -93,9 +93,15 @@ PRODUCT_PACKAGES += \
     memtrack.msm8952 \
     liboverlay
 
-# Dot View Case
+# ANT+
 PRODUCT_PACKAGES += \
-    Dotcase
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -162,9 +168,18 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_soft_flacdec
 
-# Power
+# Power HAL
 PRODUCT_PACKAGES += \
     power.msm8952
+
+# QC PROPRIETARY
+ifneq ($(QCPATH),)
+# proprietary wifi display, if available
+PRODUCT_BOOT_JARS += WfdCommon
+
+PRODUCT_PROPERTY_OVERRIDES +=
+    persist.cne.feature=4
+endif
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -189,6 +204,7 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf \
+    libwcnss_qmi \
     wcnss_service
 
 PRODUCT_COPY_FILES += \
@@ -203,3 +219,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     $(LOCAL_PATH)/wifi/WCNSS_wlan_dictionary.dat:system/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+
+
