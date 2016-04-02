@@ -94,6 +94,18 @@ PRODUCT_PACKAGES += \
     memtrack.msm8952 \
     liboverlay
 
+# System Properties
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.isUsbOtgEnabled=true \
+    persist.sys.usb.config=mtp
+
+# CRDA
+PRODUCT_PACKAGES += \
+    crda \
+    linville.key.pub.pem \
+    regdbdump \
+    regulatory.bin
+
 # FM Radio
 PRODUCT_PACKAGES += \
     qcom.fmradio \
@@ -183,9 +195,13 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libOmxVidcCommon \
     libstagefrighthw \
-    libstagefright_soft_flacdec
+    libstagefright_soft_flacdec \
+    qcmediaplayer
 
-# Power HAL
+PRODUCT_BOOT_JARS += \
+    qcmediaplayer
+
+# Qcom Power HAL
 PRODUCT_PACKAGES += \
     power.msm8952
 
@@ -204,9 +220,14 @@ PRODUCT_PACKAGES += \
     netmgr_config.xml \
     qmi_config.xml
 
-# RIL
+# Debug
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    camera2.portability.force_api=1
+
+# RIL 
 PRODUCT_PACKAGES += \
-    libcnefeatureconfig
+    libcnefeatureconfig \
+    libxml2
 
 # Thermal
 PRODUCT_COPY_FILES += \
