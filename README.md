@@ -1,7 +1,3 @@
-(No kernel source yet)
-the tree needs work.
-
-
 Copyright 2016 - The CyanogenMod Project
 
 Device configuration for Xiaomi Redmi Note 3 Pro
