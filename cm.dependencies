@@ -1,0 +1,7 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "swapnilxd/android_kernel_oneplus_onyx",
+    "target_path": "kernel/xiaomi/msm8956"
+  },
+]
