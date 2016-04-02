@@ -117,11 +117,12 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.rc \
+    init.qcom.bt.sh \
     init.qcom.power.rc \
+    init.qcom.rc \
     init.qcom.usb.rc \
-    init.recovery.qcom.rc \
     ueventd.qcom.rc
+
 
 # Input
 PRODUCT_COPY_FILES += \
