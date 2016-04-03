@@ -107,6 +107,12 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# CM hardware
+BOARD_USES_CYANOGEN_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    device/xiaomi/kenzo/cmhw \
+    hardware/cyanogen/cmhw
+
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
