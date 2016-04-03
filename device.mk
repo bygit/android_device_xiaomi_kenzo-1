@@ -99,6 +99,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true \
     persist.sys.usb.config=mtp
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
+
 # CRDA
 PRODUCT_PACKAGES += \
     crda \
